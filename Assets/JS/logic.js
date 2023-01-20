@@ -1,14 +1,21 @@
 var MainContainer = $("#container");
 
+var today = moment()
 
-for(i = 1; i< 17; i++)
+var CurrentHour = today.format("H")
+console.log("hello")
+ // console.log((moment(i, ["HH"]).format("H")));
+for(i = 9; i< 18; i++)
 {
     var BoxDiv = $("<div>")
 
 
     var TimeDiv = $("<div>")
     TimeDiv.addClass("hour")
-    TimeDiv.text("10:00")
+    
+    var TimeDivText = $("<p>")
+    TimeDivText.text(moment(i, ["HH"]).format("h A"))
+    TimeDiv.append(TimeDivText)
 
 
     var InputBox= $("<input>")
@@ -18,7 +25,7 @@ for(i = 1; i< 17; i++)
     SubmitButton.addClass("saveBtn")
 
 
-
+  
     BoxDiv.append(TimeDiv)
     BoxDiv.append(InputBox)
     BoxDiv.append(SubmitButton)
@@ -28,3 +35,4 @@ for(i = 1; i< 17; i++)
 
     
 }
+
