@@ -36,8 +36,6 @@ for(i = 9; i< 18; i++)
         InputBox.addClass("future inputbox");
     }
 
-    $(InputBox).attr("inputnum",i-9);
-
     var SubmitButton= $("<button>");
     SubmitButton.addClass("saveBtn");
     SubmitButton.text("Add")
