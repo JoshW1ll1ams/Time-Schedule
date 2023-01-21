@@ -1,11 +1,12 @@
 $(document).ready(function() {
 var MainContainer = $("#container");
+var CurrentDay = $("#currentDay");
 
 var today = moment()
 
 var CurrentHour = parseInt(today.format("H"))
 
-
+CurrentDay.text(moment().format("dddd MMMM Do"))
 for(i = 9; i< 18; i++)
 {
     var timeI = parseInt((moment(i, ["HH"]).format("H")));
@@ -39,6 +40,7 @@ for(i = 9; i< 18; i++)
 
     var SubmitButton= $("<button>");
     SubmitButton.addClass("saveBtn");
+    SubmitButton.text("Add")
     $(SubmitButton).attr("buttonnum",i-9);
 
     BoxDiv.append(TimeDiv);
@@ -56,12 +58,7 @@ InputBox.val(localStorage.getItem("ButtonClick"+i-1))
 $('.saveBtn').click(function(event){
     var ButtonPressed = this.getAttribute('buttonnum');
     var RelativeInput =  $('#container').children().eq(ButtonPressed).children().eq(1).val();
-    //savedTasks.ButtonPressed = RelativeInput;
-   // console.log(savedTasks.ButtonPressed)
     localStorage.setItem("ButtonClick"+ButtonPressed,RelativeInput)
 });
-//localStorage.setItem("ButtonClick"+0,RelativeInput)
- var saved = localStorage.getItem("ButtonClick"+0)
- console.log(saved)
 
 });
