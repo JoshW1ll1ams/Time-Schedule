@@ -7,6 +7,7 @@ They are color coded according to wether the hour the represent is in the past, 
 
 The user can then type into the input sections to add text, once they click the add button this entry is saved to local storage.
 
+The user will also be able to remove there entries at anytime by deleting the entry and clicking add.
 
 # Screenshot of deployed application
 ![Image of site](/Images/DeployedApplication.png/?raw=true)
