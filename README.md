@@ -15,5 +15,5 @@ The user will also be able to remove there entries at anytime by deleting the en
 
 
 
-# URL of deployed application
+# URL of application
 https://joshw1ll1ams.github.io/Time-Schedule/
